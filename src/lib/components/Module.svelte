@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { Module } from '$customTypes';
-	import { Malachite, Almandine, Cerulean, Rutile, Xantic } from '$lib/assets/socket-type';
+	import { Malachite, Almandine, Cerulean, Rutile, Xantic } from '$assets/socket-type';
 
 	type Props = {
 		module: Module;
