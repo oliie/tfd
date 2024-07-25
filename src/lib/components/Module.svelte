@@ -6,6 +6,8 @@
 		module: Module;
 	};
 
+	let { module }: Props = $props();
+
 	const SOCKET_TYPE: Record<string, string> = {
 		Malachite,
 		Almandine,
@@ -13,8 +15,6 @@
 		Rutile,
 		Xantic
 	};
-
-	let { module }: Props = $props();
 </script>
 
 <div class="flex justify-center rounded-lg border border-foreground/20">
