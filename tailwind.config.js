@@ -17,7 +17,11 @@ export default {
 			},
 			colors: {
 				background: 'hsl(var(--background) / <alpha-value>)',
-				foreground: 'hsl(var(--foreground) / <alpha-value>)'
+				foreground: 'hsl(var(--foreground) / <alpha-value>)',
+				muted: {
+					DEFAULT: 'hsl(var(--muted) / <alpha-value>)',
+					foreground: 'hsl(var(--muted-foreground) / <alpha-value>)'
+				}
 			}
 		}
 	},

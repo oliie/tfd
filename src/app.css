@@ -6,11 +6,17 @@
 	:root {
 		--background: 158 20% 96%;
 		--foreground: 222.2 84% 4.9%;
+
+		--muted: 158 20% 76%;
+		--muted-foreground: 222.2 84% 24.9%;
 	}
 
 	.dark {
 		--background: 222.2 84% 10.9%;
-		--foreground: 210 40% 98%;
+		--foreground: 210 00% 98%;
+
+		--muted: 222.2 84% 30.9%;
+		--muted-foreground: 210 10% 48%;
 	}
 
 	body {

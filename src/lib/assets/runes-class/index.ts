@@ -1,7 +1,7 @@
 import Descendant from './descendant.png';
 import General from './general.png';
-import HighCaliber from './high-caliber.png';
+import HighPower from './high-power.png';
 import Impact from './impact.png';
 import Special from './special.png';
 
-export { Descendant, General, HighCaliber, Impact, Special };
+export { Descendant, General, HighPower, Impact, Special };
