@@ -20,7 +20,7 @@
 
 <input type="search" bind:value={query} />
 
-<div class="grid grid-cols-5">
+<div class="grid grid-cols-5 gap-2">
 	{#each queriedModules as module}
 		<Module {module} />
 	{/each}
