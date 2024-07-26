@@ -24,7 +24,12 @@
 
 <h1 class="text-4xl font-semibold tracking-tighter">Modules</h1>
 
-<input type="search" bind:value={query} />
+<input
+	type="search"
+	bind:value={query}
+	placeholder="Search module"
+	class="border-1 border-green-500 bg-background text-foreground"
+/>
 
 <div class="grid grid-cols-5 gap-2">
 	{#each queriedModules as module (module.module_id)}
