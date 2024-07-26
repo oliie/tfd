@@ -10,6 +10,7 @@
 
 	let query = $state('');
 
+	// TODO: Do this backend instead
 	const descendantModules = $derived(data.modules.filter((m) => m.module_class === 'Descendant'));
 
 	const queriedModules = $derived.by(() => {
