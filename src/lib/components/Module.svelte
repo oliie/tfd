@@ -10,8 +10,6 @@
 
 	let { module }: Props = $props();
 
-	console.log(module);
-
 	const SOCKET_TYPE: Record<string, string> = {
 		Malachite,
 		Almandine,

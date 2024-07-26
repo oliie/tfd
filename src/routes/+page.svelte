@@ -22,13 +22,13 @@
 	});
 </script>
 
-<h1 class="text-4xl font-semibold tracking-tighter">Modules</h1>
+<h1 class="text-4xl font-semibold tracking-tighter">Descendant Builder</h1>
 
 <input
 	type="search"
 	bind:value={query}
 	placeholder="Search module"
-	class="border-1 border-green-500 bg-background text-foreground"
+	class="border-1 my-2 w-full border-green-500 bg-foreground/10 p-2 text-foreground"
 />
 
 <div class="grid grid-cols-5 gap-2">
