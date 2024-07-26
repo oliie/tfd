@@ -23,3 +23,41 @@
 		@apply bg-background text-foreground;
 	}
 }
+
+.action-tooltip {
+	@apply text-white;
+	@apply absolute;
+	@apply top-0;
+	@apply shadow-sm;
+	@apply bg-background/85;
+	@apply rounded-md;
+	@apply p-3;
+	@apply text-xs;
+	@apply pointer-events-none;
+	@apply left-1/2;
+	@apply w-[220px];
+	@apply text-center;
+	@apply opacity-0;
+	@apply font-medium;
+	@apply z-50;
+	transform: translate(calc(-50% + 0px), calc(-100% - -82px));
+	transition:
+		opacity 0.2s ease-out,
+		top 0.2s ease-out;
+}
+
+.action-tooltip::after {
+	@apply border-transparent;
+	@apply border-t-background/85;
+	@apply bottom-0;
+	@apply left-1/2;
+	@apply absolute;
+	@apply content-[''];
+	@apply border-[10px];
+	transform: translate(-50%, 99%);
+}
+
+.action-tooltip--active {
+	@apply opacity-100;
+	@apply top-[-6px];
+}

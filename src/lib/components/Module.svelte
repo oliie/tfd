@@ -2,6 +2,7 @@
 	import type { Module } from '$customTypes';
 	import { Malachite, Almandine, Cerulean, Rutile, Xantic } from '$assets/socket-type';
 	import { Descendant, General, HighPower, Impact, Special } from '$assets/runes-class';
+	import { tooltip } from '$actions';
 
 	type Props = {
 		module: Module;
@@ -35,8 +36,11 @@
 	};
 </script>
 
-<div class="flex flex-col gap-2 rounded-lg border border-foreground/20 p-2">
-	<div class="flex flex-1 justify-between">
+<div
+	class="flex flex-col gap-2 rounded-lg border border-foreground/20 p-2 transition-colors hover:bg-foreground/10"
+	use:tooltip={`${module.module_stat[0].value}`}
+>
+	<div class="flex flex-1 items-start justify-between">
 		<div class="flex items-center gap-1">
 			<img
 				class="size-4"
@@ -61,7 +65,7 @@
 
 	<div class="text-center text-sm font-medium">{module.module_name}</div>
 
-	<div class="text-muted-foreground mt-2 bg-foreground/5 text-center text-xs">
+	<div class="mt-2 bg-foreground/5 text-center text-xs text-muted-foreground">
 		{module.module_type ? module.module_type : '-'}
 	</div>
 </div>
