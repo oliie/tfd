@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Module } from '$components';
+	import { Descendant, Module } from '$components';
 	import type { PageServerData } from './$types';
 
 	type Props = {
@@ -24,15 +24,27 @@
 
 <h1 class="text-4xl font-semibold tracking-tighter">Descendant Builder</h1>
 
-<input
-	type="search"
-	bind:value={query}
-	placeholder="Search module"
-	class="border-1 my-2 w-full border-green-500 bg-foreground/10 p-2 text-foreground"
-/>
+<div class="flex flex-col gap-4">
+	<div class="flex gap-4">
+		<div class="w-1/4">
+			<Descendant descendants={data.descendants} />
+		</div>
 
-<div class="grid grid-cols-5 gap-2">
-	{#each queriedModules as module (module.module_id)}
-		<Module {module} />
-	{/each}
+		<div class="w-3/4">Sockets.svelte</div>
+	</div>
+
+	<div>
+		<input
+			type="search"
+			bind:value={query}
+			placeholder="Search module"
+			class="border-1 my-2 w-full border-green-500 bg-foreground/10 p-2 text-foreground"
+		/>
+
+		<div class="grid grid-cols-5 gap-2">
+			{#each queriedModules as module (module.module_id)}
+				<Module {module} />
+			{/each}
+		</div>
+	</div>
 </div>

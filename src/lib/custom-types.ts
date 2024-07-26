@@ -59,3 +59,30 @@ export type Module = {
 	module_tier: Tier;
 	module_type: ModuleType;
 };
+
+export type DescendantStatDetail = {
+	stat_type: string;
+	stat_value: number;
+};
+
+export type DescendantStat = {
+	level: number;
+	stat_detail: DescendantStatDetail[];
+};
+
+export type DescendantSkill = {
+	skill_type: string;
+	skill_name: string;
+	element_type: string;
+	arche_type: string;
+	skill_image_url: string;
+	skill_description: string;
+};
+
+export type Descendant = {
+	descendant_id: string;
+	descendant_name: string;
+	descendant_image_url: string;
+	descendant_stat: DescendantStat[];
+	descendant_skill: DescendantSkill[];
+};
