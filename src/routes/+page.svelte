@@ -9,10 +9,15 @@
 	let { data }: Props = $props();
 
 	let query = $state('');
-	let queriedModules = $derived.by(() => {
-		if (!query) return data.modules;
 
-		return data.modules.filter((m) => m.module_name.toLowerCase().includes(query.toLowerCase()));
+	const descendantModules = $derived(data.modules.filter((m) => m.module_class === 'Descendant'));
+
+	const queriedModules = $derived.by(() => {
+		if (!query) return descendantModules;
+
+		return descendantModules.filter((m) =>
+			m.module_name.toLowerCase().includes(query.toLowerCase())
+		);
 	});
 </script>
 
