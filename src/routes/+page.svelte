@@ -38,7 +38,7 @@
 			type="search"
 			bind:value={query}
 			placeholder="Search module"
-			class="border-1 my-2 w-full border-green-500 bg-foreground/10 p-2 text-foreground"
+			class="w-full p-2 my-2 border-green-500 border-1 bg-foreground/10 text-foreground"
 		/>
 
 		<div class="grid grid-cols-5 gap-2">
