@@ -16,8 +16,10 @@
 	const queriedModules = $derived.by(() => {
 		if (!query) return descendantModules;
 
-		return descendantModules.filter((m) =>
-			m.module_name.toLowerCase().includes(query.toLowerCase())
+		return descendantModules.filter(
+			(m) =>
+				m.module_name.toLowerCase().includes(query.toLowerCase()) ||
+				m.module_stat[0].value.toLowerCase().includes(query.toLowerCase())
 		);
 	});
 </script>
